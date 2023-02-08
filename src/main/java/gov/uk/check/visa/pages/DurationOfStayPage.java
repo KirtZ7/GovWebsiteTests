@@ -23,24 +23,31 @@ public class DurationOfStayPage extends Utility {
     @FindBy(xpath = "//div[@class='govuk-radios']//div[1]")
     WebElement sixMonthsMore;
 
-    // more than six months
-    @FindBy(xpath = "//div[@class='govuk-radios']//div[2]")
-    WebElement sixMonthsLess;
-
-    public void selectSixMonthsMore(String moreOrLess){
+    public void selectSixMonthsMore(){
         log.info("Length of stay button is clicked "+sixMonthsMore.toString());
         clickOnElement(sixMonthsMore);
 
     }
 
-    public void selectSixMonthsLess(String moreOrLess){
+    // more than six months
+    @FindBy(xpath = "//div[@class='govuk-radios']//div[2]")
+    WebElement sixMonthsLess;
+
+    public void selectSixMonthsLess(){
         log.info("Length of stay button is clicked "+sixMonthsLess.toString());
         clickOnElement(sixMonthsLess);
 
     }
 
-    public void clickNextStepButton(){
 
+    //continue button
+    @FindBy(xpath = "//button[normalize-space()='Continue']")
+    WebElement nextStepButton;
+    public void clickNextStepButton(){
+        log.info("Next step button being pressed :" +nextStepButton.toString());
+        clickOnElement(nextStepButton);
     }
+
+
 
 }

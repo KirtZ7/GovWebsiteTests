@@ -49,7 +49,7 @@ public class CustomListeners implements ITestListener {
     public void onStart(ITestContext iTestContext) {
         reporter = new ExtentSparkReporter(System.getProperty("user.dir")+"/test-output/extent.html");
         reporter.config().setDocumentTitle("Automation Report");
-        reporter.config().setReportName("CV-Library");
+        reporter.config().setReportName("GovWebsite");
         reporter.config().setTheme(Theme.STANDARD);
         reports = new ExtentReports();
         reports.attachReporter(reporter);

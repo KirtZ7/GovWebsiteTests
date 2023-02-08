@@ -1,6 +1,7 @@
 package gov.uk.check.visa.pages;
 
 import gov.uk.check.visa.utility.Utility;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -16,7 +17,7 @@ public class StartPage extends Utility {
     }
 
     //Start Now Button
-    @FindBy(xpath = "//a[@class=\"gem-c-button govuk-button govuk-button--start\"]")
+    @FindBy(xpath = "//a[contains(text(),'Start now')]")
     WebElement startNowButton;
 
     public void pressStartNowButton(){
@@ -25,12 +26,14 @@ public class StartPage extends Utility {
     }
 
     //Accept cookies
+    //By acceptAddCookies=By.xpath("//button[@class='gem-c-button govuk-button']");
     @FindBy(xpath = "//button[@class='gem-c-button govuk-button']")
     WebElement acceptAddCookies;
 
     public void acceptAddCookiesButton(){
         log.info("Accept additional cookies button is pressed :" +acceptAddCookies.toString());
         clickOnElement(acceptAddCookies);
+
     }
 
 }

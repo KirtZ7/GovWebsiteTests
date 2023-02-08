@@ -18,21 +18,34 @@ public class ResultPage extends Utility {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//h1[@class='govuk-fieldset__heading gem-c-radio__heading-text']")
+    //results for australia
+    @FindBy(xpath = "//h2[@class='gem-c-heading gem-c-heading--font-size-27 govuk-!-margin-bottom-6']")
     WebElement resultMessage;
 
-    public String getResultMessage (){
-        log.info("Results message :" + resultMessage.toString());
-        getTextFromElement(resultMessage);
-        return getTextFromElement(resultMessage);
-    }
 
-    public void confirmResultMessage(String expectedMessage){
+    public void confirmResultMessageAustralia(){
         log.info("Confirmed Results message :" +resultMessage.toString());
-        String actualMessage = "What are you coming to the UK to do?";
+        String actualMessage = getTextFromElement(resultMessage);
+        String expectedMessage = "You will not need a visa to come to the UK";
         Assert.assertEquals(actualMessage,expectedMessage);
 
     }
 
+    //results for Chile
+    public void confirmResultMessageChile(){
+        log.info("Confirmed Results message :" +resultMessage.toString());
+        String actualMessage = getTextFromElement(resultMessage);
+        String expectedMessage = "You need a visa to work in health and care";
+        Assert.assertEquals(actualMessage,expectedMessage);
+
+    }
+
+    //result for colombia
+    public void confirmResultsMessageColombia(){
+        log.info("Comfirmed results emssage: " + resultMessage.toString());
+        String actualMessage = getTextFromElement(resultMessage);
+        String expectedMessage = "You may need a visa";
+        Assert.assertEquals(actualMessage,expectedMessage);
+    }
 
 }

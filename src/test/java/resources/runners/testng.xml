@@ -9,7 +9,7 @@
 
     <test name="Gov Website">
         <classes>
-            <class name=""></class>
+            <class name="gov.uk.check.visa.testsuite.VisaConfirmationTest"></class>
         </classes>
     </test>
 </suite>

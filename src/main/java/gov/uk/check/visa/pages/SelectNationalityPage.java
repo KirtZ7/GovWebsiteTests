@@ -4,13 +4,12 @@ import gov.uk.check.visa.utility.Utility;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
-import static gov.uk.check.visa.driverfactory.ManageDriver.driver;
+
 
 public class SelectNationalityPage extends Utility {
 

@@ -15,7 +15,7 @@ public class FamilyImmigrationStatusPage extends Utility {
         PageFactory.initElements(driver,this);
     }
 
-    //nextStepButton Yes - No
+    //next Step Button
 
     public void selectImmigrationStatus(String status){
 
