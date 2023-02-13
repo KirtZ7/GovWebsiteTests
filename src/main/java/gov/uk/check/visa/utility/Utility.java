@@ -1,13 +1,10 @@
 package gov.uk.check.visa.utility;
 
+import gov.uk.check.visa.driverfactory.ManageDriver;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import gov.uk.check.visa.driverfactory.ManageDriver;
+import org.openqa.selenium.support.ui.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,6 +13,7 @@ import java.time.Duration;
 import java.util.Date;
 import java.util.List;
 import java.util.function.Function;
+
 
 public class Utility extends ManageDriver {
     /*Utility Class extends to ManageDriver for the driver to finding locators

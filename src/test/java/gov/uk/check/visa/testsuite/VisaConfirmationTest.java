@@ -2,55 +2,61 @@ package gov.uk.check.visa.testsuite;
 
 import gov.uk.check.visa.pages.*;
 import gov.uk.check.visa.testbase.TestBase;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class VisaConfirmationTest extends TestBase {
 
-    DurationOfStayPage durationOfStayPage;
-    FamilyImmigrationStatusPage familyImmigrationStatusPage;
-    ReasonForTravelPage reasonForTravelPage;
-    ResultPage resultPage;
-    SelectNationalityPage selectNationalityPage;
-    StartPage startPage;
-    WorkTypePage workTypePage;
+    DurationOfStayPage durationOfStayPage = new DurationOfStayPage();
+    ReasonForTravelPage reasonForTravelPage = new ReasonForTravelPage();
+    ResultPage resultPage = new ResultPage();
+    SelectNationalityPage selectNationalityPage = new SelectNationalityPage();
+    StartPage startPage = new StartPage();
+    WorkTypePage workTypePage = new WorkTypePage();
 
+
+    @BeforeMethod(alwaysRun = true)
+    public void inIt(){
+        startPage = new StartPage();
+    }
     @Test
     public void anAustralianComingToUKForTourism() throws InterruptedException {
 
-        Thread.sleep(10000);
         startPage.acceptAddCookiesButton();
         startPage.pressStartNowButton();
-        selectNationalityPage.selectCountryDropDown("Australia");
-        selectNationalityPage.clickOnContinueButton();
-        reasonForTravelPage.selectReasonForVisitTourism();
-        reasonForTravelPage.clickContinueButton();
-        resultPage.confirmResultMessageAustralia();
+        startPage.chooseCountryDropdown("Australia");
+        startPage.pressContinueButton();
+        startPage.selectReasonForVisitTourism();
+        startPage.clickContinueButton();
+        startPage.confirmResultMessageAustralia();
 
     }
 
     @Test
     public void aChileanComingToTheUKForWorkAndPlansOnStayingForLongerThanSixMonths(){
+
         startPage.acceptAddCookiesButton();
         startPage.pressStartNowButton();
-        selectNationalityPage.selectCountryDropDown("Chile");
-        selectNationalityPage.clickOnContinueButton();
-        reasonForTravelPage.selectReasonForVisitWork();
-        reasonForTravelPage.clickContinueButton();
-        durationOfStayPage.selectSixMonthsMore();
-        durationOfStayPage.clickNextStepButton();
+        startPage.chooseCountryDropdown("Chile");
+        startPage.pressContinueButton();
+        startPage.selectReasonForVisitWork();
+        startPage.clickContinueButton();
+        startPage.selectSixMonthsMore();
+        startPage.clickNextStepButton();
         workTypePage.selectJobTypeHealthCare();
         workTypePage.pressContinueButton();
-        resultPage.confirmResultMessageChile();
+        startPage.confirmResultMessageChile();
     }
 
     @Test
     public void aColumbianNationalComingToTheUKToJoinAPartnerForALongStayTheyDoHaveAnArticle10Or20Card(){
         startPage.acceptAddCookiesButton();
         startPage.pressStartNowButton();
-        selectNationalityPage.selectCountryDropDown("Colombia");
-        selectNationalityPage.clickOnContinueButton();
-        reasonForTravelPage.selectReasonForVisitJoinPartner();
-        reasonForTravelPage.clickContinueButton();
+        startPage.chooseCountryDropdown("Colombia");
+        startPage.pressContinueButton();
+        startPage.selectReasonForVisitJoinPartner();
+        startPage.clickContinueButton();
+        startPage.confirmResultsMessageColombia();
     }
 
 
