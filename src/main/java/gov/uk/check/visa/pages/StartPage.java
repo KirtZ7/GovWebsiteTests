@@ -17,21 +17,20 @@ public class StartPage extends Utility {
     }
 
     //Start Now Button
-    @FindBy(xpath = "//a[contains(text(),'Start now')]")
+    @FindBy(xpath = "//article[@role='article']/section/a")
     WebElement startNowButton;
 
     public void pressStartNowButton(){
-        log.info("Start now button is pressed :" + startNowButton.toString());
         clickOnElement(startNowButton);
     }
 
     //Accept cookies
     //By acceptAddCookies=By.xpath("//button[@class='gem-c-button govuk-button']");
-    @FindBy(xpath = "//button[@class='gem-c-button govuk-button']")
+    @FindBy(xpath = "//div[@class='govuk-button-group']/button")
     WebElement acceptAddCookies;
 
     public void acceptAddCookiesButton(){
-        log.info("Accept additional cookies button is pressed :" +acceptAddCookies.toString());
+
         clickOnElement(acceptAddCookies);
 
     }

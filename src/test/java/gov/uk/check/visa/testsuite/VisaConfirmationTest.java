@@ -2,25 +2,30 @@ package gov.uk.check.visa.testsuite;
 
 import gov.uk.check.visa.pages.*;
 import gov.uk.check.visa.testbase.TestBase;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class VisaConfirmationTest extends TestBase {
 
-    DurationOfStayPage durationOfStayPage;
-    FamilyImmigrationStatusPage familyImmigrationStatusPage;
-    ReasonForTravelPage reasonForTravelPage;
-    ResultPage resultPage;
-    SelectNationalityPage selectNationalityPage;
-    StartPage startPage;
-    WorkTypePage workTypePage;
+    DurationOfStayPage durationOfStayPage = new DurationOfStayPage();
+    FamilyImmigrationStatusPage familyImmigrationStatusPage = new FamilyImmigrationStatusPage();
+    ReasonForTravelPage reasonForTravelPage = new ReasonForTravelPage();
+    ResultPage resultPage = new ResultPage();
+    SelectNationalityPage selectNationalityPage = new SelectNationalityPage();
+    StartPage startPage = new StartPage();
+    WorkTypePage workTypePage = new WorkTypePage();
 
+
+    @BeforeMethod(alwaysRun = true)
+    public void inIt(){
+        startPage = new StartPage();
+    }
     @Test
     public void anAustralianComingToUKForTourism() throws InterruptedException {
 
-        Thread.sleep(10000);
         startPage.acceptAddCookiesButton();
         startPage.pressStartNowButton();
-        selectNationalityPage.selectCountryDropDown("Australia");
+        selectNationalityPage.selectCountry("Australia");
         selectNationalityPage.clickOnContinueButton();
         reasonForTravelPage.selectReasonForVisitTourism();
         reasonForTravelPage.clickContinueButton();
@@ -30,9 +35,11 @@ public class VisaConfirmationTest extends TestBase {
 
     @Test
     public void aChileanComingToTheUKForWorkAndPlansOnStayingForLongerThanSixMonths(){
+
+        System.out.println(startPage);
         startPage.acceptAddCookiesButton();
         startPage.pressStartNowButton();
-        selectNationalityPage.selectCountryDropDown("Chile");
+        selectNationalityPage.selectCountry("Chile");
         selectNationalityPage.clickOnContinueButton();
         reasonForTravelPage.selectReasonForVisitWork();
         reasonForTravelPage.clickContinueButton();
@@ -47,7 +54,7 @@ public class VisaConfirmationTest extends TestBase {
     public void aColumbianNationalComingToTheUKToJoinAPartnerForALongStayTheyDoHaveAnArticle10Or20Card(){
         startPage.acceptAddCookiesButton();
         startPage.pressStartNowButton();
-        selectNationalityPage.selectCountryDropDown("Colombia");
+        selectNationalityPage.selectCountry("Colombia");
         selectNationalityPage.clickOnContinueButton();
         reasonForTravelPage.selectReasonForVisitJoinPartner();
         reasonForTravelPage.clickContinueButton();

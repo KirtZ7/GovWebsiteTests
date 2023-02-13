@@ -25,7 +25,7 @@ public class ReasonForTravelPage extends Utility {
     WebElement continueButton;
 
     public void clickContinueButton(){
-        log.info("Next step button is pressed :");
+        //log.info("Next step button is pressed :");
         clickOnElement(continueButton);
     }
 
@@ -34,7 +34,7 @@ public class ReasonForTravelPage extends Utility {
     WebElement visitReasonTourism;
 
     public void selectReasonForVisitTourism() {
-        log.info("Reason for visit dropdown :" + visitReasonTourism.toString());
+        //log.info("Reason for visit dropdown :" + visitReasonTourism.toString());
         clickOnElement(visitReasonTourism);
 
     }
@@ -42,7 +42,7 @@ public class ReasonForTravelPage extends Utility {
     WebElement visitReasonWork;
 
     public void selectReasonForVisitWork() {
-        log.info("Reason for visit dropdown :" + visitReasonWork.toString());
+        //log.info("Reason for visit dropdown :" + visitReasonWork.toString());
         clickOnElement(visitReasonWork);
 
     }
@@ -50,7 +50,7 @@ public class ReasonForTravelPage extends Utility {
     WebElement visitReasonStudy;
 
     public void selectReasonForVisitStudy() {
-        log.info("Reason for visit dropdown :" + visitReasonStudy.toString());
+        //log.info("Reason for visit dropdown :" + visitReasonStudy.toString());
         clickOnElement(visitReasonStudy);
 
     }
@@ -58,7 +58,7 @@ public class ReasonForTravelPage extends Utility {
     WebElement visitReasonTransit;
 
     public void selectReasonForTransit() {
-        log.info("Reason for visit dropdown :" + visitReasonTransit.toString());
+        //log.info("Reason for visit dropdown :" + visitReasonTransit.toString());
         clickOnElement(visitReasonTransit);
 
     }
@@ -66,7 +66,7 @@ public class ReasonForTravelPage extends Utility {
     WebElement visitReasonJoinPartner;
 
     public void selectReasonForVisitJoinPartner() {
-        log.info("Reason for visit dropdown :" + visitReasonJoinPartner.toString());
+        //log.info("Reason for visit dropdown :" + visitReasonJoinPartner.toString());
         clickOnElement(visitReasonJoinPartner);
 
     }
@@ -75,7 +75,7 @@ public class ReasonForTravelPage extends Utility {
     WebElement visitReasonGetMarried;
 
     public void  selectVisitReasonGetMarried (){
-        log.info("Reason for visit radio :"+ visitReasonGetMarried.toString());
+        //log.info("Reason for visit radio :"+ visitReasonGetMarried.toString());
         clickOnElement(visitReasonGetMarried);
     }
 
@@ -84,21 +84,21 @@ public class ReasonForTravelPage extends Utility {
     WebElement visitReasonStayWithChild;
 
     public void  selectVisitReasonStayWithChild (){
-        log.info("Reason for visit radio :"+ visitReasonStayWithChild.toString());
+        //log.info("Reason for visit radio :"+ visitReasonStayWithChild.toString());
         clickOnElement(visitReasonStayWithChild);
     }
     @FindBy(xpath = "//input[@id='response-7']")
     WebElement visitReasonMedical;
 
     public void  selectVisitReasonMedical (){
-        log.info("Reason for visit radio :"+ visitReasonMedical.toString());
+        //log.info("Reason for visit radio :"+ visitReasonMedical.toString());
         clickOnElement(visitReasonMedical);
     }
     @FindBy(xpath = "//input[@id='response-8']")
     WebElement visitReasonDiplomat;
 
     public void  selectVisitReasonDiplomat (){
-        log.info("Reason for visit radio :"+ visitReasonDiplomat.toString());
+        //log.info("Reason for visit radio :"+ visitReasonDiplomat.toString());
         clickOnElement(visitReasonDiplomat);
     }
 

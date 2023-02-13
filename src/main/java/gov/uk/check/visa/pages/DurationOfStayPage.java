@@ -34,7 +34,7 @@ public class DurationOfStayPage extends Utility {
     WebElement sixMonthsLess;
 
     public void selectSixMonthsLess(){
-        log.info("Length of stay button is clicked "+sixMonthsLess.toString());
+        //log.info("Length of stay button is clicked "+sixMonthsLess.toString());
         clickOnElement(sixMonthsLess);
 
     }
@@ -44,7 +44,7 @@ public class DurationOfStayPage extends Utility {
     @FindBy(xpath = "//button[normalize-space()='Continue']")
     WebElement nextStepButton;
     public void clickNextStepButton(){
-        log.info("Next step button being pressed :" +nextStepButton.toString());
+        //log.info("Next step button being pressed :" +nextStepButton.toString());
         clickOnElement(nextStepButton);
     }
 
