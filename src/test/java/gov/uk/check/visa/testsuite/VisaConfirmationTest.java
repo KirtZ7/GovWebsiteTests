@@ -9,14 +9,12 @@ public class VisaConfirmationTest extends TestBase {
 
     StartPage startPage = new StartPage();
 
-
-
     @BeforeMethod(alwaysRun = true)
     public void inIt(){
         startPage = new StartPage();
     }
     @Test
-    public void anAustralianComingToUKForTourism() throws InterruptedException {
+    public void anAustralianComingToUKForTourism() {
 
         startPage.acceptAddCookiesButton();
         startPage.pressStartNowButton();

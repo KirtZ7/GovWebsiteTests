@@ -6,7 +6,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import gov.uk.check.visa.pages.StartPage;
 
-public class AusTestCheck {
+public class TestCheckSteps {
     @Given("^I am on the start page$")
     public void iAmOnTheStartPage() {
     }
