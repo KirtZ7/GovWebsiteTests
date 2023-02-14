@@ -7,12 +7,8 @@ import org.testng.annotations.Test;
 
 public class VisaConfirmationTest extends TestBase {
 
-    DurationOfStayPage durationOfStayPage = new DurationOfStayPage();
-    ReasonForTravelPage reasonForTravelPage = new ReasonForTravelPage();
-    ResultPage resultPage = new ResultPage();
-    SelectNationalityPage selectNationalityPage = new SelectNationalityPage();
     StartPage startPage = new StartPage();
-    WorkTypePage workTypePage = new WorkTypePage();
+
 
 
     @BeforeMethod(alwaysRun = true)
@@ -27,7 +23,7 @@ public class VisaConfirmationTest extends TestBase {
         startPage.chooseCountryDropdown("Australia");
         startPage.pressContinueButton();
         startPage.selectReasonForVisitTourism();
-        startPage.clickContinueButton();
+        startPage.pressContinueButton();
         startPage.confirmResultMessageAustralia();
 
     }
@@ -40,11 +36,11 @@ public class VisaConfirmationTest extends TestBase {
         startPage.chooseCountryDropdown("Chile");
         startPage.pressContinueButton();
         startPage.selectReasonForVisitWork();
-        startPage.clickContinueButton();
+        startPage.pressContinueButton();
         startPage.selectSixMonthsMore();
-        startPage.clickNextStepButton();
-        workTypePage.selectJobTypeHealthCare();
-        workTypePage.pressContinueButton();
+        startPage.pressContinueButton();
+        startPage.selectJobTypeHealthCare();
+        startPage.pressContinueButton();
         startPage.confirmResultMessageChile();
     }
 
@@ -55,7 +51,7 @@ public class VisaConfirmationTest extends TestBase {
         startPage.chooseCountryDropdown("Colombia");
         startPage.pressContinueButton();
         startPage.selectReasonForVisitJoinPartner();
-        startPage.clickContinueButton();
+        startPage.pressContinueButton();
         startPage.confirmResultsMessageColombia();
     }
 
